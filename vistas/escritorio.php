@@ -14,6 +14,7 @@ require 'header.php';
 if ($_SESSION['escritorio']==1)
 {
 
+
 ?>
 <!--Contenido-->
       <!-- Content Wrapper. Contains page content -->
@@ -34,7 +35,7 @@ if ($_SESSION['escritorio']==1)
           <!-- small box -->
           <div class="small-box bg-aqua">
             <div class="inner">
-              <h3>150</h3>
+              <h3 id="total_botellas">--</h3>
               <p>Cantidad de Botellas</p>
             </div>
             <div class="icon">
@@ -60,8 +61,8 @@ if ($_SESSION['escritorio']==1)
           <!-- small box -->
           <div class="small-box bg-yellow">
             <div class="inner">
-              <h3>44</h3>
-              <p>Botellas Fuera de planta</p>
+              <h3 id="tb_pendientes_devolucion">--</h3>
+              <p>Penduentes de devolucion</p>
             </div>
             <div class="icon">
               <i class="ion ion-stats-bars"></i>
@@ -119,7 +120,7 @@ require 'footer.php';
 ?>
 
 
-<script type="text/javascript" src="scripts/recepcion.js"></script>
+<script type="text/javascript" src="scripts/dashboard.js"></script>
 <?php
 }
 ob_end_flush();

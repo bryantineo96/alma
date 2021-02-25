@@ -49,11 +49,11 @@ Class Botella
 	//Implementar un método para listar los registros
 	public function listar()
 	{
-		//$sql="SELECT b.idbotella,b.idproveedor,b.cod_botella,p.nombre as propietario, b.descripcion,b.unidad,b.medida,b.estado from botella b INNER JOIN proveedor p on b.idproveedor = p.idproveedor";
-		$sql="SELECT b.idbotella,b.idproveedor,b.cod_botella,p.nombre as propietario, b.descripcion,b.unidad,b.medida,b.estado , md.fecha_detalle from botella b
-INNER JOIN proveedor p on b.idproveedor = p.idproveedor
-INNER JOIN mov_detalle md ON b.idbotella = md.idbotella
-ORDER BY md.fecha_detalle DESC";
+		$sql="SELECT b.idbotella,b.idproveedor,b.cod_botella,p.nombre as propietario, b.descripcion,b.unidad,b.medida,b.estado from botella b INNER JOIN proveedor p on b.idproveedor = p.idproveedor";
+// 		$sql="SELECT b.idbotella,b.idproveedor,b.cod_botella,p.nombre as propietario, b.descripcion,b.unidad,b.medida,b.estado , md.fecha_detalle from botella b
+// INNER JOIN proveedor p on b.idproveedor = p.idproveedor
+// INNER JOIN mov_detalle md ON b.idbotella = md.idbotella
+// ORDER BY md.fecha_detalle DESC";
 		return ejecutarConsulta($sql);
 	}
 
