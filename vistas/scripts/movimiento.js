@@ -30,7 +30,8 @@ function init(){
 
 		$("#fecha_hora").inputmask("datetime", {
 	        inputFormat: "yyyy/mm/dd HH:MM",
-	        outputFormat: "dd-mm-yy HH:MM:ss",
+					outputFormat: "yyyy/mm/dd HH:MM",
+	        //outputFormat: "dd-mm-yy HH:MM:ss",
 	        inputEventOnly: true
 	    });
 

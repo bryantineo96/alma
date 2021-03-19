@@ -66,7 +66,7 @@ Class Movimiento
 	//Implementar un método para mostrar los datos de un registro a modificar
 	public function mostrar($idmovimiento)
 	{
-		$sql="SELECT i.idmovimiento,DATE(i.fecha_mov) as fecha,i.tipo_mov,i.idproveedor,p.nombre as proveedor, i.doc_ext,i.doc_int, i.observacion,i.estado FROM movimiento i INNER JOIN proveedor p ON i.idproveedor=p.idproveedor WHERE i.idmovimiento='$idmovimiento'";
+		$sql="SELECT i.idmovimiento,i.fecha_mov as fecha,i.tipo_mov,i.idproveedor,p.nombre as proveedor, i.doc_ext,i.doc_int, i.observacion,i.estado FROM movimiento i INNER JOIN proveedor p ON i.idproveedor=p.idproveedor WHERE i.idmovimiento='$idmovimiento'";
 		return ejecutarConsultaSimpleFila($sql);
 	}
 
